@@ -84,6 +84,7 @@
                         <rp.uuid>6261a58a-2ed7-456f-a462-c4d44c3bb77f</rp.uuid>
                         <rp.launch>nata130970_TEST_EXAMPLE</rp.launch>
                         <rp.project>nata130970_personal</rp.project>
+                        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
                     </systemPropertyVariables>
                     <systemProperties>
                         <properties>
