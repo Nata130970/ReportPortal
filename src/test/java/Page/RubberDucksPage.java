@@ -1,12 +1,8 @@
 package Page;
-import io.qameta.allure.Step;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 import java.util.ArrayList;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -28,17 +24,16 @@ public class RubberDucksPage {
             "li[@class='product column shadow hover-light']//span[@class='price']");
     private static By stickerNewLocator =By.xpath("//div[@class='sticker new']");
 
-
-
-    public static int duckSubcategory() throws InterruptedException {     // Actions
+    public static int RubberDucksSubcategory() throws InterruptedException {     // Actions
         String sticker;
         int result = 0;
         String name;
         ArrayList<WebElement> list = new ArrayList<>();
-        actions().moveToElement($(buttonRubberDarkLocator)).perform();
-        actions().click($(buttonSubCategoryLocator)).perform();
+        actions().moveToElement($(buttonRubberDarkLocator)).build().perform();
+        actions().click($(buttonSubCategoryLocator)).build().perform();
         $$(wrapperSubCategoryProductsLocator).shouldBe();
-        for (WebElement el : $$(wrapperSubCategoryProductsLocator)){
+
+   for (WebElement el : $$(wrapperSubCategoryProductsLocator)){
             name = el.findElement(By.className("name")).getText();
             sticker = el.findElement(stickerSubCategoryLocator).getText();
            if  ((name.equals("Yellow Duck")) && ( sticker.equals("SALE"))) {

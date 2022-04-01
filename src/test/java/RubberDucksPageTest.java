@@ -11,18 +11,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import static org.testng.Assert.assertTrue;
 
-@Listeners({ReportPortalTestNGListener.class})
+@Listeners({Listener.class})
 public class RubberDucksPageTest extends TestBase {
 
     @Epic(value = "Duck-site")
     @Feature(value = "Check duck")
     @Story(value = "Цвет и  стикер")
     @Test
-    public void duckSubcategoryTest() throws InterruptedException {
+    public void RubberDucksSubcategoryTest() throws InterruptedException {
         int result=0;
 
-        result = RubberDucksPage.duckSubcategory();
-        assertTrue((result==3),String.format("Result= %s expRes = 3", result));
+        result = RubberDucksPage.RubberDucksSubcategory();
+        assertTrue((result == 3),String.format("Result= %s expRes = 3", result));
     }
 
     @Epic(value = "Duck-site")
