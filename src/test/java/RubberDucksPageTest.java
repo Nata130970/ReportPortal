@@ -20,8 +20,8 @@ public class RubberDucksPageTest extends TestBase {
     @Test
     public void RubberDucksSubcategoryTest() throws InterruptedException {
         int result=0;
-
         result = RubberDucksPage.RubberDucksSubcategory();
+        result++;
         assertTrue((result == 3),String.format("Result= %s expRes = 3", result));
     }
 

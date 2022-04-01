@@ -27,7 +27,7 @@ public class HomePageTest extends TestBase {
         By title;
         logger.info("Start test duckClickRubberDarkTest");
         title = HomePage.duckClickRubberDark();
-        $(title).shouldHave(text("Rubber Ducks"));
+        $(title).shouldHave(text("Rubber Ducks ttt"));
         logger.info("End test duckClickRubberDarkTest");
     }
     @Epic(value = "Duck-site")
@@ -38,7 +38,7 @@ public class HomePageTest extends TestBase {
         ElementsCollection footer ;
         logger.info("Start test duckClickDeliveryInformationTest");
         footer = HomePage.duckClickDeliveryInformation();
-        $$(footer).get(1).shouldHave(text("Delivery Information"));
+        $$(footer).get(1).shouldHave(text("Delivery Information111"));
     }
     @Epic(value = "Duck-site")
     @Feature(value = "Check page")
