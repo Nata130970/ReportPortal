@@ -1,4 +1,5 @@
 package Page;
+import com.codeborne.selenide.Condition;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -31,6 +32,8 @@ public class RubberDucksPage {
         ArrayList<WebElement> list = new ArrayList<>();
         actions().moveToElement($(buttonRubberDarkLocator)).build().perform();
         actions().click($(buttonSubCategoryLocator)).build().perform();
+        $(buttonSubCategoryLocator).shouldBe().click();
+
         $$(wrapperSubCategoryProductsLocator).shouldBe();
 
    for (WebElement el : $$(wrapperSubCategoryProductsLocator)){

@@ -22,7 +22,7 @@ public class RubberDucksPageTest extends TestBase {
         int result=0;
         result = RubberDucksPage.RubberDucksSubcategory();
         result++;
-        assertTrue((result == 3),String.format("Result= %s expRes = 3", result));
+        assertTrue((result == 3) ,String.format("Result= %s expRes = 3", result));
     }
 
     @Epic(value = "Duck-site")
