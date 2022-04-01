@@ -31,6 +31,7 @@ public class RubberDucksPage {
         ArrayList<WebElement> list = new ArrayList<>();
         actions().moveToElement($(buttonRubberDarkLocator)).build().perform();
         actions().click($(buttonSubCategoryLocator)).build().perform();
+        $(buttonSubCategoryLocator).shouldBe().click();
         $$(wrapperSubCategoryProductsLocator).shouldBe();
 
    for (WebElement el : $$(wrapperSubCategoryProductsLocator)){
