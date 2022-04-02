@@ -22,8 +22,8 @@ public class TestBase {
             default: Configuration.browser = "CHROME";;
         }
 
-        Configuration.timeout = 15000;
-        Configuration.pageLoadTimeout = 15000;
+        Configuration.timeout = 20000;
+        Configuration.pageLoadTimeout = 20000;
  //     Configuration.remote="http://192.168.0.179:4444/wd/hub";
  //     Configuration.browser = "CHROME";
         Configuration.baseUrl = "https://litecart.stqa.ru/en/";
