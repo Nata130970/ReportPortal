@@ -1,3 +1,4 @@
+import Helper.Listener;
 import Page.HomePage;
 import Page.TestBase;
 import com.codeborne.selenide.ElementsCollection;
@@ -13,7 +14,8 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
 
 
-@Listeners({ReportPortalTestNGListener.class})
+@Listeners({Listener.class})
+
 public class HomePageTest extends TestBase {
 
     @Epic(value = "Duck-site")

@@ -1,15 +1,11 @@
 package Page;
-import io.qameta.allure.Step;
+import com.codeborne.selenide.Condition;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 import java.util.ArrayList;
 import static com.codeborne.selenide.Selenide.*;
-
 
 public class RubberDucksPage {
 
@@ -28,19 +24,19 @@ public class RubberDucksPage {
             "li[@class='product column shadow hover-light']//span[@class='price']");
     private static By stickerNewLocator =By.xpath("//div[@class='sticker new']");
 
-
-
-    public static int duckSubcategory() throws InterruptedException {     // Actions
+    public static int RubberDucksSubcategory() throws InterruptedException {     // Actions
         String sticker;
         int result = 0;
         String name;
-        ArrayList<WebElement> list = new ArrayList<>();
-        actions().moveToElement($(buttonRubberDarkLocator)).perform();
-        actions().click($(buttonSubCategoryLocator)).perform();
-        $$(wrapperSubCategoryProductsLocator).shouldBe();
+
+        actions().moveToElement($(buttonRubberDarkLocator)).build().perform();
+        actions().moveToElement($(buttonSubCategoryLocator)).build().perform();
+        $(buttonSubCategoryLocator).shouldBe(Condition.visible).click();
         for (WebElement el : $$(wrapperSubCategoryProductsLocator)){
-            name = el.findElement(By.className("name")).getText();
+            $(el).shouldBe(Condition.visible);
             sticker = el.findElement(stickerSubCategoryLocator).getText();
+            name = el.findElement(By.className("name")).getText();
+
            if  ((name.equals("Yellow Duck")) && ( sticker.equals("SALE"))) {
                result++;
                logger.info(String.format("Name:  %s  Sticker: %s " ,name,sticker));
@@ -69,6 +65,7 @@ public class RubberDucksPage {
         }
         return  name;
     }
+
     public static ArrayList duckSortPrice() {
         ArrayList<Float> price = new ArrayList<>();;
 
@@ -82,12 +79,12 @@ public class RubberDucksPage {
         }
         return price;
     }
-    public static int[] duckNewLabel() {
 
+    public static int[] duckNewLabel() {
         int countLabel = 0;
         int[]  Result = new int[2];
-        $(buttonRubberDarkLocator).click();
 
+        $(buttonRubberDarkLocator).click();
         for (WebElement element : $$(stickerNewLocator)) {
             if (element.getText().equals("NEW"))
                 countLabel++;

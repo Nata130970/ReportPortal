@@ -9,7 +9,7 @@
     <version>1.0</version>
 
     <properties>
-        <Ver>4.1.2</Ver>
+        <seleniumVersion>4.1.2</seleniumVersion>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,23 +27,23 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-api</artifactId>
-            <version>${Ver}</version>
+            <version>${seleniumVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
-            <version>${Ver}</version>
+            <version>${seleniumVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-firefox-driver</artifactId>
-            <version>${Ver}</version>
+            <version>${seleniumVersion}</version>
         </dependency>
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-support</artifactId>
-            <version>${Ver}</version>
+            <version>${seleniumVersion}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -84,6 +84,7 @@
                         <rp.uuid>6261a58a-2ed7-456f-a462-c4d44c3bb77f</rp.uuid>
                         <rp.launch>nata130970_TEST_EXAMPLE</rp.launch>
                         <rp.project>nata130970_personal</rp.project>
+                        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
                     </systemPropertyVariables>
                     <systemProperties>
                         <properties>

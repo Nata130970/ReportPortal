@@ -1,13 +1,9 @@
 package Page;
-
 import com.codeborne.selenide.ElementsCollection;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import java.util.ArrayList;
-
 import static com.codeborne.selenide.Selenide.*;
-
 
 public class HomePage {
     WebDriver driver;

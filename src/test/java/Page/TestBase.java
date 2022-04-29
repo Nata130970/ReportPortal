@@ -3,15 +3,12 @@ import com.codeborne.selenide.Configuration;
 import org.apache.log4j.Logger;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import static com.codeborne.selenide.Selenide.*;
 import Helper.Browsers;
-
 
 public class TestBase {
 
     protected static Logger logger = Logger.getLogger(TestBase.class);
-
 
     @BeforeMethod
     public void setup(){
@@ -25,10 +22,9 @@ public class TestBase {
             default: Configuration.browser = "CHROME";;
         }
 
-
-        Configuration.timeout = 15000;
-        Configuration.pageLoadTimeout = 15000;
- //       Configuration.remote="http://192.168.0.179:4444/wd/hub";
+        Configuration.timeout = 20000;
+        Configuration.pageLoadTimeout = 20000;
+ //     Configuration.remote="http://192.168.0.179:4444/wd/hub";
  //     Configuration.browser = "CHROME";
         Configuration.baseUrl = "https://litecart.stqa.ru/en/";
         open(Configuration.baseUrl);
